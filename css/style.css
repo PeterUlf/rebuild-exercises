@@ -29,6 +29,42 @@ article {
 /* ————————————————————————————————————————————— */
 
 /* YOUR STYLES */
+.col1,
+.col2 {
+  display: contents;
+}
 
+.c {
+  order: 1;
+}
+.a {
+  order: 2;
+}
+.d {
+  order: 3;
+}
+.b {
+  order: 4;
+}
+.e {
+  order: 5;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
 @media (min-width: 40rem) {
+  main {
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: 2fr 1fr;
+  }
+  .col1,
+  .col2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
